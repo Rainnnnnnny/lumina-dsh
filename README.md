@@ -5,7 +5,7 @@
 Lumina is a [DSH](https://github.com/deepseek-ai) host plugin (bundle). It turns "drive PS from the command line" — a loop where every iteration costs a permission prompt, a 6-second cold start, hand-written JSX, and silent-failure trial and error — into an everyday delivery tool that runs **≈5 seconds per iteration with automatic metrics and reproducible parameters**:
 
 - **Persistent Photoshop session**: one cold start, then ~5 seconds per image; automatically restarts and retries after a crash or kill.
-- **Parameterized recipes**: 15 grading recipes + 5 built-in style LUTs; every parameter can be deep-merged and overridden, and versions can be appended iteratively. **Styles themselves are hot-reloadable data packs** (add/replace them without restarting, including parameter-only presets).
+- **Parameterized recipes**: 19 grading recipes + 5 built-in style LUTs; every parameter can be deep-merged and overridden, and versions can be appended iteratively. **Styles themselves are hot-reloadable data packs** (add/replace them without restarting, including parameter-only presets).
 - **Any framing**: game screenshots, real photos, portrait/square/ultra-wide images all work; only a screenshot UI strip detected with high confidence is cropped away.
 - **Auto mode**: just drop in an image — it crops the UI strip, decides character vs. landscape, runs HDR highlight reconstruction when needed, and applies an accepted draft preset.
 - **Optional super-resolution preprocessing**: small/low-detail sources can first run through an external AI upscaler (Real-ESRGAN / waifu2x, ...), with a built-in Lanczos fallback when no external tool is configured, before HDR reconstruction and grading.
