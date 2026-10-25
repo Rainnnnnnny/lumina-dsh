@@ -499,6 +499,12 @@ node test/acceptance.mjs acceptance.json       # regression acceptance (against 
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for details. Recipes, LUTs, and bug fixes are welcome.
 
+## Credits
+
+Development of this plugin was pair-programmed with an AI coding agent running on
+**DeepSeek Harness**: architecture, Photoshop pipeline, test suite and documentation.
+Model: **DeepSeek V4.1 flash 1017** (`deepseek-flash`).
+
 ## License
 
 MIT License, see [LICENSE](LICENSE).
