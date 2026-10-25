@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.8 — 2026-10-26
+
+### Fixed
+- Yellow skin cast: the case neutraliser now also cools the *global* split
+  channels (the case was tuned on a warm autumn shot), not just the person
+  layer, so skin no longer keeps the yellow/orange push while the rest of the
+  image keeps its look.
+
 ## 1.1.7 — 2026-10-26
 
 ### Fixed
