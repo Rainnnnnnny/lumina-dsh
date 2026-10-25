@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.6 — 2026-10-26
+
+### Fixed
+- Skin tone: learned-case params are neutralised before they are merged into the
+  person layer (warm split channels clamped, blue restored, white point/gamma
+  capped), so a case tuned on a warm autumn shot no longer turns skin yellow or
+  clips it on a cold/white scene.
+- `hdr-pop` now ships generic background colour zones (green foliage / warm reds)
+  on top of the person/background split, so the default layered path is
+  person + background + colour zones even when a case routes to hdr-pop.
+- Case-hit runs keep their person zones even if the secondary skin heuristic
+  disagrees with the Select Subject probe.
+
 ## 1.1.5 — 2026-10-26
 
 ### Fixed
