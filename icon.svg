@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Lumina">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#1b2b4a"/>
+    </linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fd3ff"/>
+      <stop offset="0.55" stop-color="#c9a7ff"/>
+      <stop offset="1" stop-color="#ffb46b"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fffdf2"/>
+      <stop offset="0.55" stop-color="#ffe6a1"/>
+      <stop offset="1" stop-color="#ff9f43" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0e18"/>
+      <stop offset="1" stop-color="#06080f"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <circle cx="128" cy="112" r="64" fill="none" stroke="url(#ring)" stroke-width="9"/>
+  <circle cx="128" cy="112" r="46" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="2"/>
+  <path d="M128 48v128M64 112h128M82 66l92 92M174 66l-92 92" stroke="#8fd3ff" stroke-opacity="0.22" stroke-width="2"/>
+  <circle cx="128" cy="112" r="30" fill="url(#core)"/>
+  <circle cx="128" cy="112" r="11" fill="#fffdf5"/>
+  <path d="M40 214l58-62 30 34 34-30 54 58z" fill="url(#hill)"/>
+  <path d="M0 214h256v22a20 20 0 0 1-20 20H20a20 20 0 0 1-20-20z" fill="#0a0e18"/>
+</svg>

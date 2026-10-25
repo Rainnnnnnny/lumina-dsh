@@ -1,0 +1,34 @@
+{
+  "_comment": "Example user style pack. Copy to <home>/.lumina/styles.json (or $LUMINA_STYLES_FILE) and edit freely; it is hot-reloaded on every ps_grade call. Styles here merge over the built-in styles by name. `lut` may be null, a bare .cube file name from the local Photoshop Presets/3DLUTs folder (or a style-level `lutDir`), or an absolute path to your own .cube. `params` is deep-merged over the recipe steps, so a style can be a colour+LUT combination.",
+  "styles": {
+    "teal-orange": {
+      "label": "Teal & orange (bring your own LUT)",
+      "description": "Cool shadows / warm skin look; point `lut` at your own .cube",
+      "lut": "my-teal-orange.cube",
+      "strength": 40,
+      "params": {
+        "vignette": 18,
+        "tone": { "gamma": 1.02 },
+        "desat": 4
+      }
+    },
+    "warm-matte": {
+      "label": "Warm matte (parameter-only)",
+      "description": "No LUT: a soft matte print look built from tone/vignette parameters",
+      "lut": null,
+      "strength": 0,
+      "params": {
+        "tone": { "gamma": 0.9, "ob": 4, "ow": 248 },
+        "split": { "sh": [-4, 0, 6], "hi": [4, 2, -3] },
+        "vignette": 34,
+        "desat": 4
+      }
+    },
+    "faded-film": {
+      "label": "Faded film 400 (absolute LUT path)",
+      "description": "Example of pointing at a LUT outside Photoshop's folder",
+      "lut": "D:/MyLUTs/faded-film-400.cube",
+      "strength": 30
+    }
+  }
+}

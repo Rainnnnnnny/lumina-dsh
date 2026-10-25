@@ -1,0 +1,2566 @@
+{
+  "defaultRecipe": "clean-premium",
+  "recipes": {
+    "clean-premium": {
+      "label": "清透高级",
+      "description": "压回过曝高光、略加深中间调、中性白平衡、主体局部对比与锐化、轻暗角。无颗粒（截图/4K 建议用这套）。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 18,
+          "opacity": 2
+        },
+        "tone": {
+          "ib": 12,
+          "iw": 248,
+          "gamma": 0.92,
+          "ob": 2,
+          "ow": 242
+        },
+        "split": {
+          "sh": [
+            2,
+            0,
+            -3
+          ],
+          "mid": [
+            2,
+            1,
+            -1
+          ],
+          "hi": [
+            1,
+            0,
+            1
+          ]
+        },
+        "desat": 6,
+        "subject": {
+          "cx": 0.49,
+          "cy": 0.8,
+          "rx": 0.17,
+          "ry": 0.24,
+          "feather": 130,
+          "tone": {
+            "ib": 8,
+            "iw": 250,
+            "gamma": 0.95,
+            "ob": 0,
+            "ow": 249
+          },
+          "usm": {
+            "amount": 32,
+            "radius": 1.0
+          }
+        },
+        "face": {
+          "cx": 0.49,
+          "cy": 0.635,
+          "rx": 0.045,
+          "ry": 0.055,
+          "feather": 40,
+          "gamma": 1.1,
+          "split": {
+            "sh": [
+              2,
+              0,
+              -2
+            ],
+            "mid": [
+              1,
+              0,
+              0
+            ],
+            "hi": [
+              3,
+              1,
+              -2
+            ]
+          }
+        },
+        "vignette": 10,
+        "clarity": {
+          "radius": 2.2,
+          "opacity": 14
+        },
+        "finalUsm": 12,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 2,
+        "sharpnessGainMin": 1.1,
+        "p50Range": [
+          0.68,
+          0.9
+        ],
+        "meanRange": [
+          0.55,
+          0.82
+        ]
+      }
+    },
+    "clean-natural": {
+      "label": "自然通透",
+      "description": "最克制的一套：只压高光、提通透、轻微锐化，不加颗粒、不加暗角、不做强对比。适合干净截图/预算有限的 8-bit 源图。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 16,
+          "opacity": 1
+        },
+        "tone": {
+          "ib": 6,
+          "iw": 250,
+          "gamma": 0.95,
+          "ob": 0,
+          "ow": 245
+        },
+        "split": {
+          "sh": [
+            1,
+            0,
+            -2
+          ],
+          "mid": [
+            1,
+            1,
+            -1
+          ],
+          "hi": [
+            1,
+            0,
+            1
+          ]
+        },
+        "desat": 3,
+        "subject": {
+          "cx": 0.49,
+          "cy": 0.8,
+          "rx": 0.17,
+          "ry": 0.24,
+          "feather": 130,
+          "tone": {
+            "ib": 4,
+            "iw": 252,
+            "gamma": 0.97,
+            "ob": 0,
+            "ow": 250
+          },
+          "usm": {
+            "amount": 22,
+            "radius": 0.8
+          }
+        },
+        "face": {
+          "cx": 0.49,
+          "cy": 0.635,
+          "rx": 0.045,
+          "ry": 0.055,
+          "feather": 40,
+          "gamma": 1.06,
+          "split": {
+            "sh": [
+              1,
+              0,
+              -1
+            ],
+            "mid": [
+              1,
+              0,
+              0
+            ],
+            "hi": [
+              2,
+              1,
+              -1
+            ]
+          }
+        },
+        "vignette": 0,
+        "clarity": {
+          "radius": 2.0,
+          "opacity": 8
+        },
+        "finalUsm": 8,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 2,
+        "sharpnessGainMin": 1.05,
+        "p50Range": [
+          0.7,
+          0.91
+        ],
+        "meanRange": [
+          0.6,
+          0.83
+        ]
+      }
+    },
+    "cinematic-film": {
+      "label": "电影感",
+      "description": "更深的中间调、matté 黑位、冷阴影暖高光分离色调、更强局部对比、轻暗角与极细颗粒（胶片感仅作可选风格）。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 22,
+          "opacity": 3
+        },
+        "tone": {
+          "ib": 20,
+          "iw": 242,
+          "gamma": 0.84,
+          "ob": 3,
+          "ow": 234
+        },
+        "split": {
+          "sh": [
+            6,
+            2,
+            -9
+          ],
+          "mid": [
+            3,
+            1,
+            -3
+          ],
+          "hi": [
+            2,
+            1,
+            -2
+          ]
+        },
+        "desat": 8,
+        "subject": {
+          "cx": 0.49,
+          "cy": 0.8,
+          "rx": 0.17,
+          "ry": 0.24,
+          "feather": 130,
+          "tone": {
+            "ib": 10,
+            "iw": 250,
+            "gamma": 0.93,
+            "ob": 0,
+            "ow": 246
+          },
+          "usm": {
+            "amount": 45,
+            "radius": 1.2
+          }
+        },
+        "face": {
+          "cx": 0.49,
+          "cy": 0.635,
+          "rx": 0.045,
+          "ry": 0.055,
+          "feather": 40,
+          "gamma": 1.1,
+          "split": {
+            "sh": [
+              2,
+              0,
+              -2
+            ],
+            "mid": [
+              1,
+              0,
+              0
+            ],
+            "hi": [
+              4,
+              2,
+              -3
+            ]
+          }
+        },
+        "vignette": 18,
+        "clarity": {
+          "radius": 2.6,
+          "opacity": 20
+        },
+        "finalUsm": 16,
+        "noise": 0.6
+      },
+      "checks": {
+        "highlightClipMaxPct": 2.5,
+        "sharpnessGainMin": 1.5,
+        "p50Range": [
+          0.62,
+          0.88
+        ],
+        "meanRange": [
+          0.5,
+          0.8
+        ]
+      }
+    },
+    "subject-pop": {
+      "label": "人物突出（分离）",
+      "description": "自动拆分人物与背景：人物提亮/加暖/锐化，背景降对比/偏冷/轻微柔化，最后自动合成。使用 PS 的 AI 主体选区，再用人物区域椭圆收窄到人物本身。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 18,
+          "opacity": 2
+        },
+        "tone": {
+          "ib": 8,
+          "iw": 250,
+          "gamma": 0.95,
+          "ob": 2,
+          "ow": 244
+        },
+        "split": {
+          "sh": [
+            2,
+            0,
+            -3
+          ],
+          "mid": [
+            1,
+            1,
+            -1
+          ],
+          "hi": [
+            1,
+            0,
+            1
+          ]
+        },
+        "desat": 4,
+        "layers": {
+          "mask": {
+            "mode": "person",
+            "feather": 16,
+            "expand": 1,
+            "personCx": 0.49,
+            "personCy": 0.74,
+            "personRx": 0.15,
+            "personRy": 0.26,
+            "personFeather": 45,
+            "fallbackHorizon": 0.62
+          },
+          "subject": {
+            "bloom": {
+              "radius": 14,
+              "opacity": 2
+            },
+            "tone": {
+              "ib": 4,
+              "iw": 252,
+              "gamma": 1.04,
+              "ob": 0,
+              "ow": 250
+            },
+            "split": {
+              "sh": [
+                0,
+                1,
+                -1
+              ],
+              "mid": [
+                2,
+                1,
+                -2
+              ],
+              "hi": [
+                4,
+                2,
+                -3
+              ]
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 16
+            },
+            "usm": {
+              "amount": 42,
+              "radius": 1.0
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 14,
+              "iw": 248,
+              "gamma": 0.9,
+              "ob": 4,
+              "ow": 236
+            },
+            "split": {
+              "sh": [
+                4,
+                1,
+                -7
+              ],
+              "mid": [
+                1,
+                0,
+                -2
+              ],
+              "hi": [
+                1,
+                0,
+                2
+              ]
+            },
+            "usm": {
+              "amount": 10,
+              "radius": 1.0
+            }
+          }
+        },
+        "vignette": 8,
+        "clarity": {
+          "radius": 2.2,
+          "opacity": 10
+        },
+        "finalUsm": 8,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 2,
+        "sharpnessGainMin": 1.05,
+        "subjectSharpnessGainMin": 1.08,
+        "backgroundSharpnessMin": 0.9,
+        "p50Range": [
+          0.68,
+          0.9
+        ],
+        "meanRange": [
+          0.55,
+          0.82
+        ]
+      }
+    },
+    "landscape-depth": {
+      "label": "前景/背景分离（纵深）",
+      "description": "按水平线自动拆分前景与背景（可选指定 horizon 位置）：前景加深/加暖/锐化，背景提亮雾气/偏冷/柔化，做出空气透视纵深。适合风景/大场景。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 16,
+          "opacity": 1
+        },
+        "tone": {
+          "ib": 10,
+          "iw": 250,
+          "gamma": 0.94,
+          "ob": 2,
+          "ow": 242
+        },
+        "split": {
+          "sh": [
+            2,
+            0,
+            -2
+          ],
+          "mid": [
+            1,
+            0,
+            0
+          ],
+          "hi": [
+            2,
+            1,
+            -1
+          ]
+        },
+        "desat": 3,
+        "layers": {
+          "mask": {
+            "mode": "horizon",
+            "horizon": 0.6,
+            "feather": 140
+          },
+          "subject": {
+            "tone": {
+              "ib": 12,
+              "iw": 250,
+              "gamma": 0.92,
+              "ob": 2,
+              "ow": 242
+            },
+            "split": {
+              "sh": [
+                2,
+                1,
+                -1
+              ],
+              "mid": [
+                2,
+                1,
+                -2
+              ],
+              "hi": [
+                2,
+                1,
+                -2
+              ]
+            },
+            "clarity": {
+              "radius": 2.2,
+              "opacity": 14
+            },
+            "usm": {
+              "amount": 34,
+              "radius": 1.0
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 2,
+              "iw": 253,
+              "gamma": 1.02,
+              "ob": 8,
+              "ow": 238
+            },
+            "split": {
+              "sh": [
+                2,
+                0,
+                -3
+              ],
+              "mid": [
+                0,
+                0,
+                1
+              ],
+              "hi": [
+                0,
+                0,
+                3
+              ]
+            },
+            "usm": {
+              "amount": 6,
+              "radius": 1.0
+            }
+          }
+        },
+        "vignette": 8,
+        "clarity": {
+          "radius": 2.2,
+          "opacity": 8
+        },
+        "finalUsm": 8,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 2,
+        "sharpnessGainMin": 1.05,
+        "subjectSharpnessGainMin": 1.05,
+        "backgroundSharpnessMin": 0.9,
+        "p50Range": [
+          0.68,
+          0.9
+        ],
+        "meanRange": [
+          0.55,
+          0.82
+        ]
+      }
+    },
+    "dark-cinematic": {
+      "label": "暗调电影感",
+      "description": "为暗调/大光比场景设计：提亮暗部、控制高饱和、轻微分离调色，不使用噪点。全画幅占位蒙版避免非分层输出限制，可通过 params 换成真实蒙版。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 24,
+          "opacity": 2
+        },
+        "tone": {
+          "ib": 6,
+          "iw": 252,
+          "gamma": 1.12,
+          "ob": 0,
+          "ow": 253
+        },
+        "split": {
+          "sh": [
+            2,
+            0,
+            -2
+          ],
+          "mid": [
+            1,
+            0,
+            -1
+          ],
+          "hi": [
+            1,
+            0,
+            1
+          ]
+        },
+        "desat": 8,
+        "layers": {
+          "mask": {
+            "mode": "polygon",
+            "polygon": [
+              [
+                0.001,
+                0.003
+              ],
+              [
+                0.999,
+                0.003
+              ],
+              [
+                0.999,
+                0.997
+              ],
+              [
+                0.001,
+                0.997
+              ]
+            ],
+            "feather": 1
+          },
+          "subject": {},
+          "background": {}
+        },
+        "vignette": 16,
+        "clarity": {
+          "radius": 2.0,
+          "opacity": 12
+        },
+        "finalUsm": 14,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 2,
+        "sharpnessGainMin": 1.05,
+        "subjectSharpnessGainMin": 1.02,
+        "backgroundSharpnessMin": 0.9,
+        "p50Range": [
+          0.28,
+          0.55
+        ],
+        "meanRange": [
+          0.28,
+          0.5
+        ]
+      }
+    },
+    "subject-manual": {
+      "label": "人物分层（手动轮廓·默认）",
+      "description": "默认分层流程：先用 tracemask.py 手动描粗略轮廓，硬描吸附成密多边形，再分片组合成精确选区；主体提亮锐化、背景压暗，输出可复现。params.layers.mask.polygonListFile 或 polygonFile 必填。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 20,
+          "opacity": 1.5
+        },
+        "tone": {
+          "ib": 4,
+          "iw": 252,
+          "gamma": 1.1,
+          "ob": 0,
+          "ow": 254
+        },
+        "split": {
+          "sh": [
+            2,
+            0,
+            -2
+          ],
+          "mid": [
+            1,
+            0,
+            -2
+          ],
+          "hi": [
+            2,
+            1,
+            -1
+          ]
+        },
+        "desat": 8,
+        "layers": {
+          "mask": {
+            "mode": "polygon",
+            "feather": 4,
+            "contract": 1,
+            "edgeSafe": 12
+          },
+          "subject": {
+            "bloom": {
+              "radius": 12,
+              "opacity": 1.2
+            },
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 1.06,
+              "ob": 0,
+              "ow": 255
+            },
+            "split": {
+              "sh": [
+                1,
+                0,
+                -1
+              ],
+              "mid": [
+                1,
+                0,
+                -1
+              ],
+              "hi": [
+                1,
+                0,
+                0
+              ]
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 14
+            },
+            "usm": {
+              "amount": 30,
+              "radius": 1.0
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 6,
+              "iw": 244,
+              "gamma": 0.92,
+              "ob": 2,
+              "ow": 240
+            },
+            "split": {
+              "sh": [
+                3,
+                0,
+                -3
+              ],
+              "mid": [
+                1,
+                0,
+                -1
+              ],
+              "hi": [
+                1,
+                0,
+                0
+              ]
+            }
+          }
+        },
+        "vignette": 18,
+        "clarity": {
+          "radius": 2.0,
+          "opacity": 6
+        },
+        "finalUsm": 6,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 2,
+        "sharpnessGainMin": 1.03,
+        "subjectSharpnessGainMin": 1.05,
+        "backgroundSharpnessMin": 0.85,
+        "p50Range": [
+          0.26,
+          0.62
+        ],
+        "meanRange": [
+          0.26,
+          0.55
+        ]
+      }
+    },
+    "subject-alpha": {
+      "label": "人物分层（通道蒙版·软 alpha）",
+      "description": "通道蒙版分层：先用 tracemask.py alpha 生成像素级软 alpha RGBA（发丝保留部分透明），mask.mode=alpha 让 Photoshop 直接读取图层透明通道作蒙版，主体提亮/锐化、背景压暗，边缘过渡由每像素 alpha 决定。params.layers.mask.alphaFile 必填。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 20,
+          "opacity": 1.5
+        },
+        "tone": {
+          "ib": 4,
+          "iw": 252,
+          "gamma": 1.1,
+          "ob": 0,
+          "ow": 254
+        },
+        "split": {
+          "sh": [
+            2,
+            0,
+            -2
+          ],
+          "mid": [
+            1,
+            0,
+            -2
+          ],
+          "hi": [
+            2,
+            1,
+            -1
+          ]
+        },
+        "desat": 8,
+        "layers": {
+          "mask": {
+            "mode": "alpha",
+            "feather": 0,
+            "contract": 0,
+            "edgeSafe": 14,
+            "storeChannel": true
+          },
+          "subject": {
+            "bloom": {
+              "radius": 12,
+              "opacity": 1.2
+            },
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 1.06,
+              "ob": 0,
+              "ow": 255
+            },
+            "split": {
+              "sh": [
+                1,
+                0,
+                -1
+              ],
+              "mid": [
+                1,
+                0,
+                -1
+              ],
+              "hi": [
+                1,
+                0,
+                0
+              ]
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 14
+            },
+            "usm": {
+              "amount": 30,
+              "radius": 1.0
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 6,
+              "iw": 244,
+              "gamma": 0.92,
+              "ob": 2,
+              "ow": 240
+            },
+            "split": {
+              "sh": [
+                3,
+                0,
+                -3
+              ],
+              "mid": [
+                1,
+                0,
+                -1
+              ],
+              "hi": [
+                1,
+                0,
+                0
+              ]
+            }
+          }
+        },
+        "vignette": 18,
+        "clarity": {
+          "radius": 2.0,
+          "opacity": 6
+        },
+        "finalUsm": 6,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 2,
+        "sharpnessGainMin": 1.03,
+        "subjectSharpnessGainMin": 1.05,
+        "backgroundSharpnessMin": 0.85,
+        "p50Range": [
+          0.26,
+          0.62
+        ],
+        "meanRange": [
+          0.26,
+          0.55
+        ]
+      }
+    },
+    "hdr-pop": {
+      "label": "HDR 观感（高动态范围模拟）",
+      "description": "模拟 HDR→SDR tone-mapping 的观感：高光更暖更亮、暗部更深、色彩更浓、局部对比更强。8-bit 截图无法恢复裁切高光，只做观感模拟。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 24,
+          "opacity": 2.0
+        },
+        "tone": {
+          "ib": 4,
+          "iw": 252,
+          "gamma": 1.0,
+          "ob": 0,
+          "ow": 253
+        },
+        "split": {
+          "sh": [
+            -6,
+            0,
+            8
+          ],
+          "mid": [
+            1,
+            0,
+            2
+          ],
+          "hi": [
+            6,
+            3,
+            -5
+          ]
+        },
+        "desat": 6,
+        "layers": {
+          "mask": {
+            "mode": "auto",
+            "feather": 3,
+            "contract": 2,
+            "edgeSafe": 14
+          },
+          "subject": {
+            "bloom": {
+              "radius": 16,
+              "opacity": 2
+            },
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 1.06,
+              "ob": 0,
+              "ow": 255
+            },
+            "split": {
+              "sh": [
+                -3,
+                0,
+                4
+              ],
+              "mid": [
+                1,
+                0,
+                0
+              ],
+              "hi": [
+                5,
+                3,
+                -4
+              ]
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 12
+            },
+            "usm": {
+              "amount": 26,
+              "radius": 1.0
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 6,
+              "iw": 250,
+              "gamma": 1.03,
+              "ob": 0,
+              "ow": 250
+            },
+            "split": {
+              "sh": [
+                -4,
+                0,
+                6
+              ],
+              "mid": [
+                1,
+                0,
+                0
+              ],
+              "hi": [
+                4,
+                2,
+                -3
+              ]
+            }
+          }
+        },
+        "vignette": 14,
+        "clarity": {
+          "radius": 2.4,
+          "opacity": 8
+        },
+        "finalUsm": 0,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 4,
+        "sharpnessGainMin": 1.03,
+        "subjectSharpnessGainMin": 1.02,
+        "backgroundSharpnessMin": 0.85,
+        "p50Range": [
+          0.22,
+          0.6
+        ],
+        "meanRange": [
+          0.22,
+          0.55
+        ]
+      }
+    },
+    "atmospheric-depth": {
+      "label": "大气透视（前景/中景/背景·渐变三层）",
+      "description": "渐变版空气透视：两条宽羽化水平分界线把画面拆成前景/中景/背景三层。前景（近）加深加暖加对比，中景保持中性并轻锐化，背景（远）提亮、偏冷、降对比做出雾气纵深。适合大场景/风景/角色位于远景中的构图；后续可用像素级深度分区替代渐变版。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 24,
+          "opacity": 2
+        },
+        "tone": {
+          "ib": 4,
+          "iw": 252,
+          "gamma": 1.0,
+          "ob": 0,
+          "ow": 253
+        },
+        "split": {
+          "sh": [
+            -6,
+            0,
+            8
+          ],
+          "mid": [
+            1,
+            0,
+            2
+          ],
+          "hi": [
+            6,
+            3,
+            -5
+          ]
+        },
+        "desat": 6,
+        "layers": {
+          "mask": {
+            "mode": "depth",
+            "band1": 0.33,
+            "band2": 0.88,
+            "feather1": 150,
+            "feather2": 110,
+            "edgeSafe": 6
+          },
+          "midground": {
+            "tone": {
+              "ib": 2,
+              "iw": 254,
+              "gamma": 1.02,
+              "ob": 0,
+              "ow": 254
+            },
+            "split": {
+              "sh": [
+                -2,
+                0,
+                3
+              ],
+              "mid": [
+                1,
+                0,
+                1
+              ],
+              "hi": [
+                3,
+                1,
+                -2
+              ]
+            },
+            "usm": {
+              "amount": 16,
+              "radius": 1.0
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 6
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 1.16,
+              "ob": 10,
+              "ow": 242
+            },
+            "split": {
+              "sh": [
+                -2,
+                0,
+                4
+              ],
+              "mid": [
+                0,
+                0,
+                2
+              ],
+              "hi": [
+                0,
+                0,
+                2
+              ]
+            },
+            "usm": {
+              "amount": 2,
+              "radius": 1.0
+            }
+          },
+          "subject": {
+            "tone": {
+              "ib": 14,
+              "iw": 246,
+              "gamma": 0.88,
+              "ob": 6,
+              "ow": 236
+            },
+            "split": {
+              "sh": [
+                -5,
+                0,
+                8
+              ],
+              "mid": [
+                1,
+                0,
+                1
+              ],
+              "hi": [
+                4,
+                2,
+                -4
+              ]
+            },
+            "usm": {
+              "amount": 26,
+              "radius": 1.0
+            },
+            "clarity": {
+              "radius": 2.2,
+              "opacity": 10
+            }
+          }
+        },
+        "vignette": 14,
+        "clarity": {
+          "radius": 2.2,
+          "opacity": 6
+        },
+        "finalUsm": 0,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 3.5,
+        "sharpnessGainMin": 1.03,
+        "p50Range": [
+          0.22,
+          0.58
+        ],
+        "meanRange": [
+          0.22,
+          0.52
+        ]
+      }
+    },
+    "depth-subject": {
+      "label": "人物×大气透视（前景/人物/背景 三层）",
+      "description": "混合版纵深分层：中景用通道蒙版（软 alpha）锁定人物，前景用宽羽化渐变带表现近景，其余背景做空气透视（提亮/偏冷/降对比）。需要 params.layers.mask.midAlphaFile（tracemask.py alpha 生成的 RGBA）；不传则退化为纯渐变三层。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 20,
+          "opacity": 1.5
+        },
+        "tone": {
+          "ib": 4,
+          "iw": 252,
+          "gamma": 1.02,
+          "ob": 0,
+          "ow": 253
+        },
+        "split": {
+          "sh": [
+            -4,
+            0,
+            6
+          ],
+          "mid": [
+            1,
+            0,
+            1
+          ],
+          "hi": [
+            4,
+            2,
+            -3
+          ]
+        },
+        "desat": 6,
+        "layers": {
+          "mask": {
+            "mode": "depth",
+            "midAlphaFile": "",
+            "band1": 0.33,
+            "band2": 0.88,
+            "feather1": 150,
+            "feather2": 110,
+            "edgeSafe": 12,
+            "storeChannel": true
+          },
+          "background": {
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 1.1,
+              "ob": 8,
+              "ow": 246
+            },
+            "split": {
+              "sh": [
+                -2,
+                0,
+                3
+              ],
+              "mid": [
+                0,
+                0,
+                1
+              ],
+              "hi": [
+                2,
+                1,
+                -1
+              ]
+            },
+            "usm": {
+              "amount": 4,
+              "radius": 1.0
+            }
+          },
+          "midground": {
+            "bloom": {
+              "radius": 14,
+              "opacity": 1.5
+            },
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 1.07,
+              "ob": 0,
+              "ow": 255
+            },
+            "split": {
+              "sh": [
+                -3,
+                0,
+                4
+              ],
+              "mid": [
+                1,
+                0,
+                0
+              ],
+              "hi": [
+                5,
+                3,
+                -4
+              ]
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 12
+            },
+            "usm": {
+              "amount": 28,
+              "radius": 1.0
+            }
+          },
+          "subject": {
+            "tone": {
+              "ib": 14,
+              "iw": 246,
+              "gamma": 0.9,
+              "ob": 6,
+              "ow": 238
+            },
+            "split": {
+              "sh": [
+                -5,
+                0,
+                8
+              ],
+              "mid": [
+                1,
+                0,
+                1
+              ],
+              "hi": [
+                4,
+                2,
+                -4
+              ]
+            },
+            "usm": {
+              "amount": 24,
+              "radius": 1.0
+            },
+            "clarity": {
+              "radius": 2.2,
+              "opacity": 10
+            }
+          }
+        },
+        "vignette": 16,
+        "clarity": {
+          "radius": 2.2,
+          "opacity": 8
+        },
+        "finalUsm": 0,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 3,
+        "sharpnessGainMin": 1.04,
+        "subjectSharpnessGainMin": 1.05,
+        "backgroundSharpnessMin": 0.85,
+        "p50Range": [
+          0.22,
+          0.6
+        ],
+        "meanRange": [
+          0.22,
+          0.55
+        ]
+      }
+    },
+    "auto-character-hdr": {
+      "label": "自动·角色 HDR（初稿）",
+      "description": "自动模式用：AI 主体分离 + HDR 观感（hdr-pop 同款），适合有角色的截图；参数已按验收过的成品固化。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 24,
+          "opacity": 2
+        },
+        "tone": {
+          "ib": 4,
+          "iw": 252,
+          "gamma": 1.0,
+          "ob": 0,
+          "ow": 253
+        },
+        "split": {
+          "sh": [
+            -6,
+            0,
+            8
+          ],
+          "mid": [
+            1,
+            0,
+            2
+          ],
+          "hi": [
+            6,
+            3,
+            -5
+          ]
+        },
+        "desat": 6,
+        "layers": {
+          "mask": {
+            "mode": "subject",
+            "feather": 2,
+            "fallbackHorizon": 0.6,
+            "edgeSafe": 14
+          },
+          "subject": {
+            "bloom": {
+              "radius": 16,
+              "opacity": 2
+            },
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 1.06,
+              "ob": 0,
+              "ow": 255
+            },
+            "split": {
+              "sh": [
+                -3,
+                0,
+                4
+              ],
+              "mid": [
+                1,
+                0,
+                0
+              ],
+              "hi": [
+                5,
+                3,
+                -4
+              ]
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 12
+            },
+            "usm": {
+              "amount": 26,
+              "radius": 1.0
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 6,
+              "iw": 250,
+              "gamma": 1.03,
+              "ob": 0,
+              "ow": 250
+            },
+            "split": {
+              "sh": [
+                -4,
+                0,
+                6
+              ],
+              "mid": [
+                1,
+                0,
+                0
+              ],
+              "hi": [
+                4,
+                2,
+                -3
+              ]
+            }
+          }
+        },
+        "vignette": 14,
+        "clarity": {
+          "radius": 2.4,
+          "opacity": 8
+        },
+        "finalUsm": 0,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 4,
+        "sharpnessGainMin": 1.02,
+        "subjectSharpnessGainMin": 1.0,
+        "backgroundSharpnessMin": 0.85,
+        "p50Range": [
+          0.2,
+          0.62
+        ],
+        "meanRange": [
+          0.2,
+          0.56
+        ]
+      }
+    },
+    "auto-character-natural": {
+      "label": "自动·角色 自然（初稿）",
+      "description": "自动模式用：AI 主体分离 + 自然通透调色，适合人物截图；参数按验收过的自然版固化。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 16,
+          "opacity": 1
+        },
+        "tone": {
+          "ib": 6,
+          "iw": 250,
+          "gamma": 0.98,
+          "ob": 0,
+          "ow": 246
+        },
+        "split": {
+          "sh": [
+            1,
+            0,
+            -2
+          ],
+          "mid": [
+            1,
+            1,
+            -1
+          ],
+          "hi": [
+            1,
+            0,
+            1
+          ]
+        },
+        "desat": 3,
+        "layers": {
+          "mask": {
+            "mode": "subject",
+            "feather": 2,
+            "fallbackHorizon": 0.6,
+            "edgeSafe": 12
+          },
+          "subject": {
+            "tone": {
+              "ib": 4,
+              "iw": 252,
+              "gamma": 0.99,
+              "ob": 0,
+              "ow": 250
+            },
+            "usm": {
+              "amount": 24,
+              "radius": 0.8
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 4,
+              "iw": 251,
+              "gamma": 1.0,
+              "ob": 0,
+              "ow": 249
+            }
+          }
+        },
+        "vignette": 0,
+        "clarity": {
+          "radius": 2.0,
+          "opacity": 8
+        },
+        "finalUsm": 8,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 2,
+        "sharpnessGainMin": 1.03,
+        "subjectSharpnessGainMin": 1.0,
+        "backgroundSharpnessMin": 0.9,
+        "p50Range": [
+          0.5,
+          0.92
+        ],
+        "meanRange": [
+          0.45,
+          0.85
+        ]
+      }
+    },
+    "auto-landscape-hdr": {
+      "label": "自动·风景 HDR（初稿）",
+      "description": "自动模式用：三层大气透视 + HDR 浓调（长城要塞 v2 同款参数），适合风景/建筑截图。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 26,
+          "opacity": 2.5
+        },
+        "tone": {
+          "ib": 2,
+          "iw": 254,
+          "gamma": 0.92,
+          "ob": 0,
+          "ow": 250
+        },
+        "split": {
+          "sh": [
+            -8,
+            0,
+            12
+          ],
+          "mid": [
+            1,
+            0,
+            2
+          ],
+          "hi": [
+            5,
+            3,
+            -4
+          ]
+        },
+        "desat": 6,
+        "layers": {
+          "mask": {
+            "mode": "depth",
+            "band1": 0.33,
+            "band2": 0.88,
+            "feather1": 150,
+            "feather2": 110,
+            "edgeSafe": 6
+          },
+          "subject": {
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 0.98,
+              "ob": 0,
+              "ow": 246
+            },
+            "split": {
+              "sh": [
+                -4,
+                0,
+                6
+              ],
+              "mid": [
+                2,
+                1,
+                -1
+              ],
+              "hi": [
+                5,
+                3,
+                -4
+              ]
+            },
+            "usm": {
+              "amount": 26,
+              "radius": 1.0
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 12
+            }
+          },
+          "midground": {
+            "tone": {
+              "ib": 2,
+              "iw": 252,
+              "gamma": 1.03,
+              "ob": 0,
+              "ow": 250
+            },
+            "split": {
+              "sh": [
+                -5,
+                0,
+                8
+              ],
+              "mid": [
+                1,
+                0,
+                1
+              ],
+              "hi": [
+                3,
+                2,
+                -2
+              ]
+            },
+            "usm": {
+              "amount": 22,
+              "radius": 1.0
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 14
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 1.12,
+              "ob": 8,
+              "ow": 236
+            },
+            "split": {
+              "sh": [
+                -4,
+                0,
+                7
+              ],
+              "mid": [
+                0,
+                0,
+                2
+              ],
+              "hi": [
+                1,
+                0,
+                3
+              ]
+            },
+            "usm": {
+              "amount": 4,
+              "radius": 1.0
+            }
+          }
+        },
+        "vignette": 22,
+        "clarity": {
+          "radius": 2.2,
+          "opacity": 18
+        },
+        "finalUsm": 14,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 3.5,
+        "sharpnessGainMin": 1.03,
+        "p50Range": [
+          0.2,
+          0.62
+        ],
+        "meanRange": [
+          0.2,
+          0.55
+        ]
+      }
+    },
+    "auto-landscape-natural": {
+      "label": "自动·风景 自然（初稿）",
+      "description": "自动模式用：三层大气透视 + 自然层次（长城要塞 v1 同款参数），适合风景/建筑截图。",
+      "crop": {
+        "mode": "bottom-strip",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 24,
+          "opacity": 2.5
+        },
+        "tone": {
+          "ib": 4,
+          "iw": 252,
+          "gamma": 0.98,
+          "ob": 0,
+          "ow": 252
+        },
+        "split": {
+          "sh": [
+            -6,
+            0,
+            9
+          ],
+          "mid": [
+            1,
+            0,
+            2
+          ],
+          "hi": [
+            4,
+            2,
+            -3
+          ]
+        },
+        "desat": 4,
+        "layers": {
+          "mask": {
+            "mode": "depth",
+            "band1": 0.33,
+            "band2": 0.88,
+            "feather1": 150,
+            "feather2": 110,
+            "edgeSafe": 6
+          },
+          "subject": {
+            "tone": {
+              "ib": 2,
+              "iw": 254,
+              "gamma": 1.0,
+              "ob": 0,
+              "ow": 250
+            },
+            "split": {
+              "sh": [
+                -2,
+                0,
+                4
+              ],
+              "mid": [
+                2,
+                1,
+                -1
+              ],
+              "hi": [
+                4,
+                2,
+                -3
+              ]
+            },
+            "usm": {
+              "amount": 22,
+              "radius": 1.0
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 10
+            }
+          },
+          "midground": {
+            "tone": {
+              "ib": 4,
+              "iw": 252,
+              "gamma": 1.02,
+              "ob": 0,
+              "ow": 250
+            },
+            "split": {
+              "sh": [
+                -4,
+                0,
+                6
+              ],
+              "mid": [
+                1,
+                0,
+                1
+              ],
+              "hi": [
+                3,
+                2,
+                -2
+              ]
+            },
+            "usm": {
+              "amount": 20,
+              "radius": 1.0
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 12
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 2,
+              "iw": 254,
+              "gamma": 1.1,
+              "ob": 8,
+              "ow": 240
+            },
+            "split": {
+              "sh": [
+                -3,
+                0,
+                5
+              ],
+              "mid": [
+                0,
+                0,
+                1
+              ],
+              "hi": [
+                1,
+                0,
+                2
+              ]
+            },
+            "usm": {
+              "amount": 4,
+              "radius": 1.0
+            }
+          }
+        },
+        "vignette": 16,
+        "clarity": {
+          "radius": 2.2,
+          "opacity": 12
+        },
+        "finalUsm": 10,
+        "noise": 0
+      },
+      "checks": {
+        "highlightClipMaxPct": 3,
+        "sharpnessGainMin": 1.03,
+        "p50Range": [
+          0.25,
+          0.65
+        ],
+        "meanRange": [
+          0.25,
+          0.58
+        ]
+      }
+    },
+    "hdr-photo": {
+      "label": "HDR观感（通用分层）",
+      "description": "通用分层 HDR：按内容自动分区（人物/主体→AI 蒙版；风景→水平线/纵深），天空提亮暖色，前景压黑冷色，宽羽化合成。",
+      "crop": {
+        "mode": "auto",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 32,
+          "opacity": 1.8
+        },
+        "tone": {
+          "ib": 14,
+          "iw": 232,
+          "gamma": 0.98,
+          "ob": 0,
+          "ow": 246
+        },
+        "split": {
+          "sh": [
+            0,
+            0,
+            0
+          ],
+          "mid": [
+            0,
+            0,
+            0
+          ],
+          "hi": [
+            0,
+            0,
+            0
+          ]
+        },
+        "desat": 0,
+        "clarity": {
+          "radius": 2.4,
+          "opacity": 6
+        },
+        "finalUsm": 8,
+        "vignette": 22,
+        "noise": 0,
+        "layers": {
+          "mask": {
+            "mode": "auto",
+            "horizon": 0.58,
+            "feather": 260
+          },
+          "subject": {
+            "tone": {
+              "ib": 50,
+              "iw": 232,
+              "gamma": 0.9,
+              "ob": 0,
+              "ow": 246
+            },
+            "split": {
+              "sh": [
+                0,
+                0,
+                0
+              ],
+              "mid": [
+                0,
+                0,
+                0
+              ],
+              "hi": [
+                0,
+                0,
+                0
+              ]
+            },
+            "clarity": {
+              "radius": 2.6,
+              "opacity": 16
+            },
+            "usm": {
+              "amount": 12,
+              "radius": 1.0
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 0.99,
+              "ob": 0,
+              "ow": 250
+            },
+            "split": {
+              "sh": [
+                0,
+                0,
+                0
+              ],
+              "mid": [
+                0,
+                0,
+                0
+              ],
+              "hi": [
+                0,
+                0,
+                0
+              ]
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 0
+            },
+            "usm": {
+              "amount": 0,
+              "radius": 1.0
+            }
+          }
+        }
+      },
+      "checks": {
+        "highlightClipMaxPct": 5,
+        "sharpnessGainMin": 1.0,
+        "subjectSharpnessGainMin": 1.0,
+        "backgroundSharpnessMin": 0.7,
+        "p50Range": [
+          0.15,
+          0.8
+        ],
+        "meanRange": [
+          0.2,
+          0.75
+        ]
+      }
+    },
+    "hdr-photo-cinematic": {
+      "label": "HDR观感（晚霞·保高光版）",
+      "description": "分区 HDR：先压缩白点保护天空云层细节，天空只加轻微暖色与光晕，前景温和压黑，宽羽化。",
+      "crop": {
+        "mode": "auto",
+        "adjustPx": 0
+      },
+      "steps": {
+        "bloom": {
+          "radius": 32,
+          "opacity": 1.8
+        },
+        "tone": {
+          "ib": 14,
+          "iw": 232,
+          "gamma": 0.98,
+          "ob": 0,
+          "ow": 246
+        },
+        "split": {
+          "sh": [
+            -8,
+            1,
+            10
+          ],
+          "mid": [
+            1,
+            0,
+            1
+          ],
+          "hi": [
+            5,
+            2,
+            -3
+          ]
+        },
+        "desat": 0,
+        "clarity": {
+          "radius": 2.4,
+          "opacity": 6
+        },
+        "finalUsm": 8,
+        "vignette": 22,
+        "noise": 0,
+        "layers": {
+          "mask": {
+            "mode": "horizon",
+            "horizon": 0.58,
+            "feather": 260
+          },
+          "subject": {
+            "tone": {
+              "ib": 50,
+              "iw": 232,
+              "gamma": 0.9,
+              "ob": 0,
+              "ow": 246
+            },
+            "split": {
+              "sh": [
+                -14,
+                3,
+                18
+              ],
+              "mid": [
+                2,
+                0,
+                2
+              ],
+              "hi": [
+                6,
+                2,
+                -3
+              ]
+            },
+            "clarity": {
+              "radius": 2.6,
+              "opacity": 16
+            },
+            "usm": {
+              "amount": 12,
+              "radius": 1.0
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 0,
+              "iw": 255,
+              "gamma": 0.99,
+              "ob": 0,
+              "ow": 250
+            },
+            "split": {
+              "sh": [
+                -2,
+                0,
+                4
+              ],
+              "mid": [
+                1,
+                0,
+                1
+              ],
+              "hi": [
+                3,
+                1,
+                -1
+              ]
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 0
+            },
+            "usm": {
+              "amount": 0,
+              "radius": 1.0
+            }
+          }
+        }
+      },
+      "checks": {
+        "highlightClipMaxPct": 5,
+        "sharpnessGainMin": 1.0,
+        "subjectSharpnessGainMin": 1.0,
+        "backgroundSharpnessMin": 0.7,
+        "p50Range": [
+          0.15,
+          0.8
+        ],
+        "meanRange": [
+          0.2,
+          0.75
+        ]
+      }
+    },
+    "region-sky": {
+      "label": "分区调色（天空色域）",
+      "description": "按颜色范围选中天空/青色区域单独提亮加暖，其余区域压暗；蒙版由原图原生分辨率生成。",
+      "crop": {
+        "mode": "auto",
+        "adjustPx": 0
+      },
+      "steps": {
+        "tone": {
+          "ib": 10,
+          "iw": 245,
+          "gamma": 0.98,
+          "ob": 0,
+          "ow": 252
+        },
+        "split": {
+          "sh": [
+            -6,
+            1,
+            8
+          ],
+          "mid": [
+            1,
+            0,
+            1
+          ],
+          "hi": [
+            8,
+            4,
+            -6
+          ]
+        },
+        "vignette": 16,
+        "layers": {
+          "mask": {
+            "mode": "color",
+            "ranges": [
+              [
+                185,
+                255,
+                0.12,
+                1.0,
+                0.3,
+                1.0
+              ]
+            ],
+            "feather": 40,
+            "invert": false
+          },
+          "subject": {
+            "tone": {
+              "ib": 0,
+              "iw": 252,
+              "gamma": 1.02,
+              "ob": 0,
+              "ow": 255
+            },
+            "split": {
+              "sh": [
+                -2,
+                0,
+                4
+              ],
+              "mid": [
+                2,
+                1,
+                1
+              ],
+              "hi": [
+                10,
+                5,
+                -8
+              ]
+            },
+            "clarity": {
+              "radius": 2.0,
+              "opacity": 8
+            }
+          },
+          "background": {
+            "tone": {
+              "ib": 16,
+              "iw": 236,
+              "gamma": 0.94,
+              "ob": 0,
+              "ow": 246
+            },
+            "split": {
+              "sh": [
+                -8,
+                2,
+                10
+              ],
+              "mid": [
+                1,
+                0,
+                1
+              ],
+              "hi": [
+                4,
+                2,
+                -3
+              ]
+            },
+            "clarity": {
+              "radius": 2.4,
+              "opacity": 14
+            },
+            "usm": {
+              "amount": 10,
+              "radius": 1.0
+            }
+          }
+        }
+      },
+      "checks": {
+        "highlightClipMaxPct": 6,
+        "sharpnessGainMin": 1.0,
+        "subjectSharpnessGainMin": 1.0,
+        "backgroundSharpnessMin": 0.7,
+        "p50Range": [
+          0.15,
+          0.85
+        ],
+        "meanRange": [
+          0.2,
+          0.8
+        ]
+      }
+    },
+    "region-zones": {
+      "label": "多分区精修（人物/植物/高光花）",
+      "description": "按人物 AI 主体 + 绿色色域 + 高光白色三区分别调色锐化；后区覆盖前区，人物放最后。",
+      "crop": {
+        "mode": "auto",
+        "adjustPx": 0
+      },
+      "steps": {
+        "tone": {
+          "ib": 6,
+          "iw": 248,
+          "gamma": 1.0,
+          "ob": 0,
+          "ow": 252
+        },
+        "vignette": 10,
+        "layers": {
+          "zones": [
+            {
+              "name": "绿叶",
+              "select": {
+                "mode": "color",
+                "ranges": [
+                  [
+                    80,
+                    180,
+                    0.1,
+                    1.0,
+                    0.1,
+                    0.88
+                  ]
+                ],
+                "feather": 26
+              },
+              "tone": {
+                "ib": 0,
+                "iw": 250,
+                "gamma": 1.04,
+                "ob": 0,
+                "ow": 255
+              },
+              "split": {
+                "sh": [
+                  -4,
+                  6,
+                  -2
+                ],
+                "mid": [
+                  1,
+                  4,
+                  -1
+                ],
+                "hi": [
+                  4,
+                  2,
+                  -4
+                ]
+              },
+              "clarity": {
+                "radius": 1.8,
+                "opacity": 10
+              }
+            },
+            {
+              "name": "白花/高光",
+              "select": {
+                "mode": "channel",
+                "channel": "lum",
+                "low": 0.8,
+                "high": 0.94,
+                "feather": 22
+              },
+              "tone": {
+                "ib": 0,
+                "iw": 255,
+                "gamma": 1.0,
+                "ob": 0,
+                "ow": 255
+              },
+              "split": {
+                "sh": [
+                  0,
+                  0,
+                  0
+                ],
+                "mid": [
+                  0,
+                  0,
+                  0
+                ],
+                "hi": [
+                  0,
+                  0,
+                  0
+                ]
+              },
+              "clarity": {
+                "radius": 2.0,
+                "opacity": 4
+              },
+              "when": "person"
+            },
+            {
+              "name": "人物",
+              "select": {
+                "mode": "person",
+                "personFeather": 40
+              },
+              "tone": {
+                "ib": 0,
+                "iw": 252,
+                "gamma": 0.995,
+                "ob": 0,
+                "ow": 252
+              },
+              "split": {
+                "sh": [
+                  -2,
+                  1,
+                  2
+                ],
+                "mid": [
+                  1,
+                  1,
+                  0
+                ],
+                "hi": [
+                  2,
+                  1,
+                  -2
+                ]
+              },
+              "clarity": {
+                "radius": 2.0,
+                "opacity": 6
+              },
+              "usm": {
+                "amount": 12,
+                "radius": 1.0
+              },
+              "when": "person"
+            }
+          ]
+        },
+        "split": {
+          "sh": [
+            0,
+            0,
+            0
+          ],
+          "mid": [
+            0,
+            0,
+            0
+          ],
+          "hi": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "checks": {
+        "highlightClipMaxPct": 8,
+        "sharpnessGainMin": 0.9,
+        "subjectSharpnessGainMin": 0.9,
+        "backgroundSharpnessMin": 0.6,
+        "p50Range": [
+          0.15,
+          0.9
+        ],
+        "meanRange": [
+          0.2,
+          0.85
+        ]
+      }
+    }
+  },
+  "styles": {
+    "natural": {
+      "label": "自然（不加 LUT）",
+      "lut": null,
+      "strength": 0,
+      "description": "保持调色结果，不加任何 LUT"
+    },
+    "cinema": {
+      "label": "电影感（Kodak 2383 印片模拟 35%）",
+      "lut": "Kodak 5218 Kodak 2383 (by Adobe).cube",
+      "strength": 35,
+      "description": "高光偏暖、暗部偏青的经典印片色彩；纯颜色映射，不加颗粒"
+    },
+    "vivid": {
+      "label": "浓郁（Kodak 5205 印片模拟 35%）",
+      "lut": "Kodak 5205 Fuji 3510 (by Adobe).cube",
+      "strength": 35,
+      "description": "更浓的暖色与对比；纯颜色映射，不加颗粒"
+    },
+    "still": {
+      "label": "胶片静物（Fuji REALA 500D 35%）",
+      "lut": "Fuji REALA 500D Kodak 2393 (by Adobe).cube",
+      "strength": 35,
+      "description": "柔和的高光滚降，高光更不容易溢出"
+    },
+    "soft": {
+      "label": "柔和胶片（Fuji ETERNA 25%）",
+      "lut": "Fuji ETERNA 250D Kodak 2395 (by Adobe).cube",
+      "strength": 25,
+      "description": "低强度柔化色彩，最温和的一档"
+    }
+  }
+}

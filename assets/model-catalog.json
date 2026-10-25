@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "note": "Model tiers for onboarding. No weights are bundled; entries only describe download sources and hardware requirements. Licences belong to the upstream projects.",
+  "tiers": [
+    {
+      "id": "supir",
+      "tier": 100,
+      "label": "SUPIR (SDXL diffusion)",
+      "quality": "ultimate",
+      "adapter": "diffusion",
+      "sizeMB": 24653,
+      "requires": {
+        "gpu": true,
+        "minVRAMGB": 12,
+        "torch": true,
+        "diskGB": 130,
+        "driverMin": "570"
+      },
+      "license": "SUPIR weights CC-BY-NC-SA; SDXL CreativeML Open RAIL++-M; CLIP/LLaVA see upstream",
+      "downloads": [
+        {
+          "fileName": "SUPIR-v0Q.ckpt",
+          "sizeMB": 5083,
+          "urls": [
+            "https://hf-mirror.com/camenduru/SUPIR/resolve/main/SUPIR-v0Q.ckpt"
+          ]
+        },
+        {
+          "fileName": "sd_xl_base_1.0_0.9vae.safetensors",
+          "sizeMB": 6617,
+          "urls": [
+            "https://hf-mirror.com/camenduru/SUPIR/resolve/main/sd_xl_base_1.0_0.9vae.safetensors"
+          ]
+        },
+        {
+          "fileName": "CLIP-ViT-bigG-14-laion2B-39B-b160k.tar",
+          "sizeMB": 9687,
+          "urls": [
+            "https://hf-mirror.com/camenduru/SUPIR/resolve/main/CLIP-ViT-bigG-14-laion2B-39B-b160k.tar"
+          ]
+        },
+        {
+          "fileName": "clip-vit-large-patch14-336.tar",
+          "sizeMB": 3266,
+          "urls": [
+            "https://hf-mirror.com/camenduru/SUPIR/resolve/main/clip-vit-large-patch14-336.tar"
+          ]
+        },
+        {
+          "fileName": "llava-v1.5-13b.tar",
+          "sizeMB": 24945,
+          "optional": true,
+          "urls": [
+            "https://hf-mirror.com/camenduru/SUPIR/resolve/main/llava-v1.5-13b.tar"
+          ]
+        },
+        {
+          "fileName": "clip-vit-large-patch14.tar",
+          "sizeMB": 6533,
+          "optional": true,
+          "urls": [
+            "https://hf-mirror.com/camenduru/SUPIR/resolve/main/clip-vit-large-patch14.tar"
+          ]
+        }
+      ],
+      "install": {
+        "venv": true,
+        "torch": true,
+        "torchvision": true,
+        "weightsSubdir": "supir",
+        "extractTars": false,
+        "pip": [
+          "diffusers",
+          "transformers",
+          "accelerate",
+          "safetensors",
+          "sentencepiece",
+          "einops",
+          "omegaconf",
+          "opencv-python",
+          "scipy",
+          "huggingface_hub",
+          "xformers==0.0.33",
+          "setuptools<81",
+          "timm",
+          "einops-exts",
+          "open-clip-torch",
+          "kornia",
+          "facexlib",
+          "pytorch-lightning",
+          "k-diffusion",
+          "webdataset"
+        ]
+      },
+      "adapterReady": true,
+      "experimental": false,
+      "codeArchive": {
+        "repo": "Fanghua-Yu/SUPIR",
+        "destName": "supir-code",
+        "urls": [
+          "https://github.com/Fanghua-Yu/SUPIR/archive/refs/heads/master.tar.gz",
+          "https://ghproxy.net/https://github.com/Fanghua-Yu/SUPIR/archive/refs/heads/master.tar.gz",
+          "https://gh-proxy.com/https://github.com/Fanghua-Yu/SUPIR/archive/refs/heads/master.tar.gz"
+        ]
+      },
+      "note": "Validated end-to-end on RTX 5080 (4 steps @512x256 -> 1024x512 in ~113s); 20 steps ~5-6 min/image."
+    },
+    {
+      "id": "hat",
+      "tier": 80,
+      "label": "HAT / DAT (transformer)",
+      "quality": "strong",
+      "adapter": "transformer",
+      "sizeMB": 150,
+      "requires": {
+        "gpu": true,
+        "minVRAMGB": 4,
+        "torch": true,
+        "diskGB": 2
+      },
+      "license": "Apache-2.0 (HAT code); check upstream weights",
+      "downloads": [],
+      "install": {
+        "venv": true,
+        "torch": true,
+        "pip": [
+          "basicsr",
+          "timm",
+          "einops"
+        ],
+        "weightsSubdir": "hat",
+        "extract": false
+      },
+      "adapterReady": false
+    },
+    {
+      "id": "ultrasharp",
+      "tier": 60,
+      "label": "4x-UltraSharp / 4x-Remacri (community GAN)",
+      "quality": "good",
+      "adapter": "old-rrdb",
+      "sizeMB": 128,
+      "requires": {
+        "gpu": false,
+        "torch": true,
+        "diskGB": 1
+      },
+      "license": "CC-BY-NC-SA (community weights, personal use)",
+      "downloads": [
+        {
+          "url": "https://hf-mirror.com/Kim2091/UltraSharp/resolve/main/4x-UltraSharp.pth",
+          "fileName": "4x-UltraSharp.pth",
+          "sizeMB": 64,
+          "urls": [
+            "https://hf-mirror.com/Kim2091/UltraSharp/resolve/main/4x-UltraSharp.pth",
+            "https://hf-mirror.com/Kim2091/UltraSharp/resolve/main/4x-UltraSharp.pth"
+          ]
+        },
+        {
+          "url": "https://hf-mirror.com/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth",
+          "fileName": "4x_foolhardy_Remacri.pth",
+          "sizeMB": 64,
+          "urls": [
+            "https://hf-mirror.com/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth",
+            "https://hf-mirror.com/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
+          ]
+        }
+      ],
+      "install": {
+        "venv": true,
+        "torch": true,
+        "pip": [],
+        "weightsSubdir": "models",
+        "extract": false
+      },
+      "adapterReady": true
+    },
+    {
+      "id": "realesrgan",
+      "tier": 40,
+      "label": "Real-ESRGAN x4plus / anime_6B (native)",
+      "quality": "solid",
+      "adapter": "native",
+      "sizeMB": 81,
+      "requires": {
+        "gpu": false,
+        "torch": true,
+        "diskGB": 1
+      },
+      "license": "BSD-3-Clause (Real-ESRGAN)",
+      "downloads": [
+        {
+          "url": "https://hf-mirror.com/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4plus.pth",
+          "fileName": "RealESRGAN_x4plus.pth",
+          "sizeMB": 64,
+          "urls": [
+            "https://hf-mirror.com/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4plus.pth",
+            "https://hf-mirror.com/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4plus.pth"
+          ]
+        },
+        {
+          "url": "https://hf-mirror.com/amd/realesrgan-x4plus-anime-6b/resolve/main/RealESRGAN_x4plus_anime_6B.pth",
+          "fileName": "RealESRGAN_x4plus_anime_6B.pth",
+          "sizeMB": 17,
+          "urls": [
+            "https://hf-mirror.com/amd/realesrgan-x4plus-anime-6b/resolve/main/RealESRGAN_x4plus_anime_6B.pth",
+            "https://hf-mirror.com/amd/realesrgan-x4plus-anime-6b/resolve/main/RealESRGAN_x4plus_anime_6B.pth"
+          ]
+        }
+      ],
+      "install": {
+        "venv": true,
+        "torch": true,
+        "pip": [],
+        "weightsSubdir": "models",
+        "extract": false
+      },
+      "adapterReady": true
+    },
+    {
+      "id": "waifu2x",
+      "tier": 20,
+      "label": "waifu2x-ncnn-vulkan (standalone)",
+      "quality": "light",
+      "adapter": "standalone",
+      "sizeMB": 35,
+      "requires": {
+        "vulkan": true,
+        "diskGB": 1
+      },
+      "license": "MIT",
+      "downloads": [
+        {
+          "url": "https://github.com/nihui/waifu2x-ncnn-vulkan/releases/download/20250915/waifu2x-ncnn-vulkan-20250915-windows.zip",
+          "fileName": "waifu2x-ncnn-vulkan-20250915-windows.zip",
+          "sizeMB": 35,
+          "urls": [
+            "https://github.com/nihui/waifu2x-ncnn-vulkan/releases/download/20250915/waifu2x-ncnn-vulkan-20250915-windows.zip",
+            "https://ghproxy.net/https://github.com/nihui/waifu2x-ncnn-vulkan/releases/download/20250915/waifu2x-ncnn-vulkan-20250915-windows.zip",
+            "https://gh-proxy.com/https://github.com/nihui/waifu2x-ncnn-vulkan/releases/download/20250915/waifu2x-ncnn-vulkan-20250915-windows.zip"
+          ]
+        }
+      ],
+      "install": {
+        "venv": false,
+        "torch": false,
+        "pip": [],
+        "weightsSubdir": "waifu2x",
+        "extract": true
+      },
+      "adapterReady": true
+    },
+    {
+      "id": "lanczos",
+      "tier": 0,
+      "label": "builtin Lanczos",
+      "quality": "fallback",
+      "adapter": "builtin",
+      "sizeMB": 0,
+      "requires": {},
+      "license": "-",
+      "downloads": [],
+      "install": {
+        "venv": false,
+        "torch": false,
+        "pip": [],
+        "weightsSubdir": "",
+        "extract": false
+      },
+      "adapterReady": true
+    }
+  ]
+}

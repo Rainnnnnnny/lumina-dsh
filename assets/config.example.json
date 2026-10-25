@@ -1,0 +1,43 @@
+{
+  "_comment": "Example user config. Copy to <home>/.lumina/config.json (or point LUMINA_CONFIG at any path). It keeps machine-specific choices out of the repo and the npm package: where projects and runtime data live, the quality-first AI upscaler chain, etc. Precedence per value: plugin config (cordis.patch.yml) > environment variable > this file > built-in default. The file is read when the plugin loads; restart/reload DSH after editing. Styles and the case bank remain hot-reloaded per call.",
+  "projectRoot": "D:/Lumina/Projects",
+  "dataDir": "D:/Lumina/Data",
+  "stylesFile": "D:/Lumina/Data/styles.json",
+  "casesFile": "D:/Lumina/Data/auto-cases.json",
+  "superResolution": {
+    "enabled": true,
+    "mode": "auto",
+    "scale": 2,
+    "minLongEdge": 1600,
+    "maxLongEdge": 8192,
+    "fallback": "lanczos",
+    "engines": {
+      "cuda": {
+        "priority": 100,
+        "label": "CUDA Real-ESRGAN",
+        "command": "",
+        "args": ["--input", "{input}", "--output", "{output}", "--scale", "{scale}", "--kind", "{sourceKind}"]
+      },
+      "vulkan": {
+        "priority": 50,
+        "label": "waifu2x Vulkan",
+        "command": "",
+        "args": ["-i", "{input}", "-o", "{output}", "-s", "{scaleInt}", "-n", "2", "-g", "0"]
+      },
+      "onnx": {
+        "priority": 30,
+        "label": "ONNX/DirectML",
+        "command": "",
+        "args": ["--input", "{input}", "--output", "{output}", "--scale", "{scale}", "--kind", "{sourceKind}"]
+      }
+    }
+  },
+  "_superResolution_single_engine_example": {
+    "enabled": true,
+    "mode": "auto",
+    "scale": 2,
+    "minLongEdge": 1600,
+    "command": "C:/Tools/realesrgan-ncnn-vulkan/realesrgan-ncnn-vulkan.exe",
+    "args": ["-i", "{input}", "-o", "{output}", "-n", "realesrgan-x4plus", "-s", "{scale}"]
+  }
+}

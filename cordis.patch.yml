@@ -1,0 +1,45 @@
+# Lumina bundle for DSH. All config keys are optional; defaults shown.
+#
+# Machine-specific choices can also live in a user config file (no repo/npm
+# package changes needed): <home>/.lumina/config.json or $LUMINA_CONFIG.
+# Precedence: this plugin config > environment variable > user config file > default.
+#
+# projectRoot  : every image-editing task gets its own folder under this root
+#                (default: <home>/Lumina; $LUMINA_PROJECT_ROOT).
+# pythonPath   : optional override; by default the DSH bundled Python is used,
+#                then whatever `python` (Windows) / `python3` (other OS) is on PATH.
+# lutDir       : optional override for the Photoshop Presets/3DLUTs folder.
+#                Auto-detected from the local Photoshop install; Adobe LUT files
+#                are never bundled with this package.
+# casesFile    : writable auto-case bank. Default: <home>/.lumina/auto-cases.json
+#                (or <dataDir>/auto-cases.json when a user config sets dataDir).
+# casesSeedFile: optional read-only seed case bank merged into lookups.
+# stylesFile   : hot-reloadable user style pack. Default: <home>/.lumina/styles.json
+#                (or <dataDir>/styles.json). Merged over the built-in styles by name
+#                on every call; a style may be a LUT look or a parameter preset.
+# superResolution: optional preprocessing: { enabled, mode:"auto"|"always", scale,
+#                minLongEdge, minSharpness, maxLongEdge, command, args }. `command`
+#                runs an external AI upscaler CLI (Real-ESRGAN/waifu2x/...); without
+#                it a built-in Lanczos upscale is used. See README.
+# psWaitMs     : how long to wait for a cold Photoshop start.
+# opTimeoutMs  : per-image-operation timeout (large files need more).
+- insert:
+    - id: photoshop
+      name: 'lumina-dsh'
+      config:
+        psWaitMs: 90000
+        opTimeoutMs: 240000
+        # vision_zoom max view size (provider caps request images at 4096 px)
+        maxViewDimension: 4096
+        # projectRoot: 'D:/Photos/LuminaProjects'
+        # lutDir: 'C:/Program Files/Adobe/Adobe Photoshop 2025/Presets/3DLUTs'
+        # casesFile: 'D:/Photos/LuminaData/auto-cases.json'
+        # casesSeedFile: 'D:/Photos/LuminaData/curated-cases.json'
+        # stylesFile: 'D:/Photos/LuminaData/styles.json'
+        # superResolution:
+        #   enabled: true
+        #   mode: auto
+        #   scale: 2
+        #   minLongEdge: 1600
+        #   command: 'C:/Tools/realesrgan-ncnn-vulkan/realesrgan-ncnn-vulkan.exe'
+        #   args: ['-i', '{input}', '-o', '{output}', '-n', 'realesrgan-x4plus', '-s', '{scale}']
