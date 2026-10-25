@@ -1,6 +1,6 @@
 {
   "name": "lumina-dsh",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Lumina — Photoshop automation for DSH: parameterized grading recipes, HDR highlight reconstruction, hot-reloadable style packs, optional super-resolution, auto mode with self-healing, QA metrics and high-resolution vision inspection.",
   "license": "MIT",
   "type": "module",
