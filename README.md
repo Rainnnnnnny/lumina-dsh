@@ -48,7 +48,21 @@ All 5 built-in styles side by side (original → natural → cinema → vivid �
 > Photoshop's **install path needs no configuration**: automation launches it through the system's Photoshop COM registration;
 > only style LUTs need the `Presets/3DLUTs` folder, which is auto-detected (see below); unusual installs can set `lutDir`.
 
-### Install as a DSH plugin
+### Install from npm (recommended)
+
+```sh
+dsh plugin --profile <profile> add lumina-dsh
+```
+
+Desktop app: **Settings → Plugins → install bundle → `lumina-dsh`**.
+
+Restart DSH once after installing, then say **hilumina** in a conversation: the plugin runs its self-check
+(dependencies, GPU/disk, the complete super-resolution tier ladder), confirms the output folder and the CUDA
+fallback model, and is ready for images.
+
+For local development, use the checkout-based install below.
+
+### Install from a local checkout (development)
 
 Put this repository in any directory, install it in a DSH profile as a `link:` / `file:` dependency, and add it to the bundle list, e.g.
 `C:\Users\<you>\.dsh\profiles\<profile>\package.json`:
