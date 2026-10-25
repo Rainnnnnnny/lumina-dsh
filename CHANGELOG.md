@@ -28,6 +28,8 @@
   catalog is now shipped in `files`; the seed case bank stays out of the package
   (`assets/auto-cases.json` is intentionally not allowlisted).
 
+Built with DeepSeek Harness — human + AI pair programming (DeepSeek V4.1 flash 1017).
+
 ## 1.1.0 — 2026-10-25
 
 ### Highlights
