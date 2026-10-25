@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.4 — 2026-10-25
+
+### Changed
+- Added `repository` / `homepage` / `bugs` metadata pointing at the public GitHub repo
+  `https://github.com/Rainnnnnnny/lumina-dsh`. No functional changes; version bump so the
+  published npm package carries the repository links.
+
 ## 1.1.3 — 2026-10-25
 
 ### Changed
