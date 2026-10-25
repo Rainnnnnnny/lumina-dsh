@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.1.11 — 2026-10-26
+
+### Added
+- Real transparent layer export: every finished project now also writes
+  `layers/person.png`, `layers/background.png`, `layers/zones/zone-N.png` and a
+  `split-real-layers.jpg` sheet, so layer separation can be inspected directly.
+- Manual region masks accept the original tiled polygon pipeline
+  (`mask.polygonListFile`, union of <900-point tiles) in addition to inline
+  polygons — the PS point cap is bypassed by tiling, not by coarsening.
+
+### Fixed
+- Self-heal now lowers the white point when highlight clipping fails instead of
+  only touching midtones/mean.
+
 ## 1.1.10 — 2026-10-26
 
 ### Fixed
