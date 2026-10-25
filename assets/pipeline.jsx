@@ -532,7 +532,10 @@ try {
     var zones = (S.layers && S.layers.zones && S.layers.zones.length) ? S.layers.zones : null;
     var depthMode = Boolean(layered && S.layers.mask.mode === 'depth');
 
-    if (zones) {
+    // Layered person/background mask wins over the auto colour zones: a manual
+    // contour must actually be cut into its own layer instead of being replaced
+    // by the zone compositor (that mismatch made the manual polygon invisible).
+    if (zones && !layered) {
         // ---- 2a. multi-zone local adjustment (order matters: later zones win overlaps) ----
         __step = 'zones';
         var zoneBase = d.activeLayer;
