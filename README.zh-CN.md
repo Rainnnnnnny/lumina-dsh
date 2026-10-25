@@ -504,3 +504,9 @@ node test/acceptance.mjs acceptance.json       # 回归验收（对照基线指�
 MIT License，见 [LICENSE](LICENSE)。
 
 Adobe、Photoshop 是 Adobe Inc. 的商标。本项目与 Adobe 无关联，不分发任何 Adobe LUT / Photoshop 二进制文件。
+
+## 致谢
+
+本插件的开发由运行在 **DeepSeek Harness** 上的 AI 编程代理结对完成：架构、Photoshop 管线、测试与文档。
+模型：**DeepSeek V4.1 flash 1017**（`deepseek-flash`）。
+
