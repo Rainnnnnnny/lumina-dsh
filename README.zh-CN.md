@@ -48,7 +48,20 @@ Lumina 是一个 [DSH](https://github.com/deepseek-ai) 宿主插件（bundle）�
 > Photoshop 的**安装路径不需要配置**：自动化通过系统里 Photoshop 的 COM 注册启动；
 > 只有风格 LUT 需要找到 `Presets/3DLUTs`，会自动探测（见下文），特殊安装可配 `lutDir`。
 
-### 通过 DSH 插件安装
+### 从 npm 安装（推荐）
+
+```sh
+dsh plugin --profile <profile> add lumina-dsh
+```
+
+桌面 App：**设置 → 插件 → 安装组合包 → `lumina-dsh`**。
+
+安装后重启一次 DSH，然后在对话里说 **hilumina**：插件会自检依赖/GPU/磁盘与完整超分档位，确认输出文件夹和 CUDA 兜底模型，之后直接丢图即可。
+
+本地开发请用下方的源码安装方式。
+
+
+### 本地源码安装（开发用）
 
 把本仓库放到任意目录，在 DSH profile 里以 `link:` / `file:` 依赖安装并加入 bundle 列表，例如
 `C:\Users\<you>\.dsh\profiles\<profile>\package.json`：
@@ -509,4 +522,3 @@ Adobe、Photoshop 是 Adobe Inc. 的商标。本项目与 Adobe 无关联，不�
 
 本插件的开发由运行在 **DeepSeek Harness** 上的 AI 编程代理结对完成：架构、Photoshop 管线、测试与文档。
 模型：**DeepSeek V4.1 flash 1017**（`deepseek-flash`）。
-
