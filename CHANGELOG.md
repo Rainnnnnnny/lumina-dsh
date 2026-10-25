@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.10 — 2026-10-26
+
+### Fixed
+- The multi-zone compositor was taking over whenever a recipe shipped colour
+  zones, so an explicit person/background mask (including a hand-drawn polygon)
+  was never cut into its own layer — the manual contour silently disappeared.
+  A layered mask now takes precedence; colour zones only run for the zone-only
+  path. Manual region selection is the priority.
+
 ## 1.1.9 — 2026-10-26
 
 ### Fixed
