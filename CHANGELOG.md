@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.1.5 — 2026-10-26
+
+### Fixed
+- Person zones are no longer dropped when the skin-tone heuristic finds nothing:
+  the Photoshop Select Subject probe is trusted first, so stylised/anime renders
+  keep their subject/background split instead of silently falling back to colour
+  zones (the flat-look bug).
+- `hdr-*` recipes now always build their HDR base (tone-mapped texture/colour
+  density), instead of only when measured highlight clipping exceeded 2.5%; HDR
+  is a look, not just a highlight-repair pass.
+- An accepted case now takes precedence over content routing: its params were
+  tuned together with its recipe, so they are no longer mixed into a different
+  recipe's zone mask.
+- QA `midtones` / `mean` checks no longer fail images whose *source* is already
+  above the target range (high-key mist scenes): stability is checked instead of
+  forcing a global darkening.
+
 ## 1.1.4 — 2026-10-25
 
 ### Changed
