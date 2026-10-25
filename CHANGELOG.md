@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.9 — 2026-10-26
+
+### Fixed
+- Manual mask overrides were being clobbered by the automatic mask-kind
+  selection (a hand-drawn `layers.mask.mode/polygon` silently became an AI
+  subject mask, so the manual contour never reached Photoshop). An explicitly
+  supplied mask mode now wins; the auto mask kind is only a fallback.
+
 ## 1.1.8 — 2026-10-26
 
 ### Fixed
