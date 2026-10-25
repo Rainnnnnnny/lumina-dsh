@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.7 — 2026-10-26
+
+### Fixed
+- Auto self-heal re-runs with `auto:false` + an explicit recipe, which lost the
+  detection/case context and therefore silently dropped the person zones and the
+  person matte on the retry. The retry now carries `params.person = true`
+  whenever the first pass had a person layer, so the healed version keeps the
+  person/background/colour-zone split (and the neutralised skin params).
+
 ## 1.1.6 — 2026-10-26
 
 ### Fixed
